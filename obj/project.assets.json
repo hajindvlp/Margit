@@ -1,0 +1,119 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "Markdig/0.17.1": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp2.1/Markdig.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/Markdig.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Markdig/0.17.1": {
+      "sha512": "uvn440tOhY848t25oG+W/stua13m7Emju28ldMQsxHFhmAp2+PAucY/NxT2CEUo9I1ZinVPDm1KH4Pm+Fr1nXg==",
+      "type": "package",
+      "path": "markdig/0.17.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/Markdig.dll",
+        "lib/net35/Markdig.pdb",
+        "lib/net35/Markdig.xml",
+        "lib/net40/Markdig.dll",
+        "lib/net40/Markdig.pdb",
+        "lib/net40/Markdig.xml",
+        "lib/netcoreapp2.1/Markdig.dll",
+        "lib/netcoreapp2.1/Markdig.pdb",
+        "lib/netcoreapp2.1/Markdig.xml",
+        "lib/netstandard2.0/Markdig.dll",
+        "lib/netstandard2.0/Markdig.pdb",
+        "lib/netstandard2.0/Markdig.xml",
+        "lib/uap10.0/Markdig.dll",
+        "lib/uap10.0/Markdig.pdb",
+        "lib/uap10.0/Markdig.pri",
+        "lib/uap10.0/Markdig.xml",
+        "markdig.0.17.1.nupkg.sha512",
+        "markdig.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.0": [
+      "Markdig >= 0.17.1"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Tool\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Tool\\Desktop\\c#\\Margit\\Margit\\Margit\\Margit.csproj",
+      "projectName": "Margit",
+      "projectPath": "C:\\Users\\Tool\\Desktop\\c#\\Margit\\Margit\\Margit\\Margit.csproj",
+      "packagesPath": "C:\\Users\\Tool\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Tool\\Desktop\\c#\\Margit\\Margit\\Margit\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Tool\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.0": {
+        "dependencies": {
+          "Markdig": {
+            "target": "Package",
+            "version": "[0.17.1, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
