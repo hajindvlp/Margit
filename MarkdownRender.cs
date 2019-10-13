@@ -1,23 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.IO;
 using Markdig;
 
 namespace Margit
 {
     static class MarkdownRender
-    {
-        private static readonly string styleLink = "<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css'>";
+    { 
         private static readonly string wrapperStart = "<div class='markdown-body'>";
         private static readonly string wrapperEnd = "</div>";
+        private static readonly string encoding = "<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'>";
 
-        static public string Md2HTML(string MdContent)
+        static public string Md2HTML(string MdContent, bool isDark)
         {
+            string style = Style.GetStyle(isDark);
+            string styleHtml = "<style>" + style + "</style>";
             string HtmlContent;
             string RenderContent;
 
             HtmlContent = Markdown.ToHtml(MdContent);
-            RenderContent = styleLink + wrapperStart + HtmlContent + wrapperEnd;
+            RenderContent = encoding + styleHtml + wrapperStart + HtmlContent + wrapperEnd;
+
             return RenderContent;
         }
     }

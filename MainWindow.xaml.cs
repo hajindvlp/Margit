@@ -20,6 +20,7 @@ namespace Margit
 {
     public partial class MainWindow : Window
     {
+        public bool isDark = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -28,10 +29,12 @@ namespace Margit
         private void Render()
         {
             string InputContent = InputTb.Text;
-            string HtmlContent = MarkdownRender.Md2HTML(InputContent);
+            string HtmlContent = MarkdownRender.Md2HTML(InputContent, isDark);
 
             if (RenderWb != null)
+            {
                 RenderWb.NavigateToString(HtmlContent);
+            }
         }
 
         private void inputTextChangedEventHandler(object sender, TextChangedEventArgs args) => Render();
@@ -81,7 +84,7 @@ namespace Margit
 
         private void ExitClicked(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            this.Close();
         }
 
         private void SaveAsContent(object sender, RoutedEventArgs e)
@@ -92,6 +95,22 @@ namespace Margit
             };
             if (saveFileDialog.ShowDialog() == true)
                 File.WriteAllText(saveFileDialog.FileName, InputTb.Text);
+        }
+
+        private void CheckDarkTheme(object sender, RoutedEventArgs e)
+        {
+            MainGrid.Background = InputTb.Background = new SolidColorBrush(Color.FromRgb(18, 18, 18));
+            InputTb.Foreground = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+            isDark = true;
+            Render();
+        }
+
+        private void UnCheckDarkTheme(object sender, RoutedEventArgs e)
+        {
+            MainGrid.Background = InputTb.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+            InputTb.Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 0));
+            isDark = false;
+            Render();
         }
     }
 }

@@ -3,10 +3,27 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:commands ="clr-namespace:Margit.Commands"
         xmlns:local="clr-namespace:Zoop"
         mc:Ignorable="d"
         Title="Mardit" Height="400" Width="700">
-    <Grid>
+    
+    <Window.CommandBindings>
+        <CommandBinding Command="New" Executed="NewContent" />
+        <CommandBinding Command="{x:Static commands:Commands.ExitCommand}" Executed="ExitClicked" />
+        <CommandBinding Command="{x:Static commands:Commands.SaveCommand}" Executed="SaveContent" />
+        <CommandBinding Command="{x:Static commands:Commands.SaveAsCommand}" Executed="SaveAsContent" />
+        <CommandBinding Command="{x:Static commands:Commands.OpenCommand}" Executed="OpenContent" />
+    </Window.CommandBindings>
+    <Window.InputBindings>
+        <KeyBinding Key="N" Modifiers="Control" Command="New"/>
+        <KeyBinding Key="W" Modifiers="Control" Command="{x:Static commands:Commands.ExitCommand}"/>
+        <KeyBinding Key="S" Modifiers="Control" Command="{x:Static commands:Commands.SaveCommand}"/>
+        <KeyBinding Key="S" Modifiers="Control+Shift" Command="{x:Static commands:Commands.SaveAsCommand}"/>
+        <KeyBinding Key="O" Modifiers="Control" Command="{x:Static commands:Commands.OpenCommand}"/>
+    </Window.InputBindings>
+
+    <Grid Name="MainGrid" Background="White">
         
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.5*"></ColumnDefinition>
@@ -21,6 +38,7 @@
             Grid.Column="0" 
             Grid.ColumnSpan="2" 
             Grid.Row="0"
+            Name="Menu"
             >
             <MenuItem Header="_File">
                 <MenuItem Header="_New" Click="NewContent" />
@@ -31,7 +49,7 @@
                 <MenuItem Header="_Exit" Click="ExitClicked"/>
             </MenuItem>
             <MenuItem Header="_View">
-                <MenuItem Header="_Dark Theme" IsCheckable="True"/>
+                <MenuItem Header="_Dark Theme" IsCheckable="True" Checked="CheckDarkTheme" Unchecked="UnCheckDarkTheme"/>
                 <MenuItem Header="_Real Time Render" IsCheckable="True"/>
                 <MenuItem Header="_Font"/>
             </MenuItem>
@@ -61,5 +79,11 @@
             Navigating="RenderWbNavigating" 
             >
         </WebBrowser>
+        
+        <!--
+        <TextBlock Name="Debug" HorizontalAlignment="Right" Grid.Row="0" Grid.Column="1">
+            Debug box
+        </TextBlock> 
+        -->
     </Grid>
 </Window>
