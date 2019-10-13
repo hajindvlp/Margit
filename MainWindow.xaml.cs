@@ -34,16 +34,16 @@ namespace Margit
                 RenderWb.NavigateToString(HtmlContent);
         }
 
-        private void inputTextChangedEventHandler(object sender, TextChangedEventArgs args)
-        {
-            Render();
-        }
+        private void inputTextChangedEventHandler(object sender, TextChangedEventArgs args) => Render();
 
         private void RenderWbNavigating(object sender, NavigatingCancelEventArgs e)
         {
             if (e.Uri != null)
                 Render();
         }
+
+        private bool ContentOpened = false;
+        private string ContentDir;
         private void NewContent(object sender, RoutedEventArgs e)
         {
             var newWindow = new MainWindow();
@@ -58,16 +58,25 @@ namespace Margit
             };
             if (openFileDialog.ShowDialog() == true)
                 InputTb.Text = File.ReadAllText(openFileDialog.FileName);
+            ContentOpened = true;
+            ContentDir = openFileDialog.FileName;
         }
 
         private void SaveContent(object sender, RoutedEventArgs e)
         {
-            SaveFileDialog saveFileDialog = new SaveFileDialog
+            if(ContentOpened)
             {
-                Filter = "Markdown file (*.md)|*.md"
-            };
-            if (saveFileDialog.ShowDialog() == true)
-                File.WriteAllText(saveFileDialog.FileName, InputTb.Text);
+                File.WriteAllText(ContentDir, InputTb.Text);
+            }
+            else
+            {
+                SaveFileDialog saveFileDialog = new SaveFileDialog
+                {
+                    Filter = "Markdown file (*.md)|*.md"
+                };
+                if (saveFileDialog.ShowDialog() == true)
+                    File.WriteAllText(saveFileDialog.FileName, InputTb.Text);
+            }
         }
 
         private void ExitClicked(object sender, RoutedEventArgs e)
@@ -77,8 +86,10 @@ namespace Margit
 
         private void SaveAsContent(object sender, RoutedEventArgs e)
         {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Filter = "Markdown file (*.md)|*.md";
+            SaveFileDialog saveFileDialog = new SaveFileDialog
+            {
+                Filter = "Markdown file (*.md)|*.md"
+            };
             if (saveFileDialog.ShowDialog() == true)
                 File.WriteAllText(saveFileDialog.FileName, InputTb.Text);
         }

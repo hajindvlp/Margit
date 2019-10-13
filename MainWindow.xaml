@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="Mardit" Height="400" Width="700">
     <Grid>
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.5*"></ColumnDefinition>
             <ColumnDefinition Width="0.5*"></ColumnDefinition>
@@ -15,13 +16,14 @@
             <RowDefinition Height="20px"></RowDefinition>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        
         <Menu 
             Grid.Column="0" 
             Grid.ColumnSpan="2" 
             Grid.Row="0"
             >
             <MenuItem Header="_File">
-                <MenuItem Header="_New" Click="NewContent"/>
+                <MenuItem Header="_New" Click="NewContent" />
                 <MenuItem Header="_Open" Click="OpenContent"/>
                 <MenuItem Header="_Save" Click="SaveContent"/>
                 <MenuItem Header="_Save As" Click="SaveAsContent"/>
@@ -38,6 +40,7 @@
                 <MenuItem Header="_Info"/>
             </MenuItem>
         </Menu>
+        
         <TextBox
             Name="InputTb"
             AcceptsReturn="True"

@@ -48,25 +48,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Tool\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\harry\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tool\\Desktop\\c#\\Margit\\Margit\\Margit\\Margit.csproj",
+      "projectUniqueName": "C:\\Users\\harry\\Desktop\\CurrentProject\\Margit\\Margit\\Margit.csproj",
       "projectName": "Margit",
-      "projectPath": "C:\\Users\\Tool\\Desktop\\c#\\Margit\\Margit\\Margit\\Margit.csproj",
-      "packagesPath": "C:\\Users\\Tool\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tool\\Desktop\\c#\\Margit\\Margit\\Margit\\obj\\",
+      "projectPath": "C:\\Users\\harry\\Desktop\\CurrentProject\\Margit\\Margit\\Margit.csproj",
+      "packagesPath": "C:\\Users\\harry\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\harry\\Desktop\\CurrentProject\\Margit\\Margit\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Tool\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\harry\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"
