@@ -60,9 +60,11 @@ namespace Margit
                 Filter = "Markdown file (*.md)|*.md"
             };
             if (openFileDialog.ShowDialog() == true)
+            {
                 InputTb.Text = File.ReadAllText(openFileDialog.FileName);
-            ContentOpened = true;
-            ContentDir = openFileDialog.FileName;
+                ContentOpened = true;
+                ContentDir = openFileDialog.FileName;
+            }
         }
 
         private void SaveContent(object sender, RoutedEventArgs e)
@@ -111,6 +113,16 @@ namespace Margit
             InputTb.Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 0));
             isDark = false;
             Render();
+        }
+
+        private readonly bool InfoOpened = false;
+        private void OpenInfo(object sender, RoutedEventArgs e)
+        {
+            if(!InfoOpened)
+            {
+                var InfoWindow = new info();
+                InfoWindow.Show();
+            }
         }
     }
 }

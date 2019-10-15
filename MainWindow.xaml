@@ -6,7 +6,7 @@
         xmlns:commands ="clr-namespace:Margit.Commands"
         xmlns:local="clr-namespace:Zoop"
         mc:Ignorable="d"
-        Title="Mardit" Height="400" Width="700">
+        Title="Margit" Height="400" Width="700">
     
     <Window.CommandBindings>
         <CommandBinding Command="New" Executed="NewContent" />
@@ -50,12 +50,6 @@
             </MenuItem>
             <MenuItem Header="_View">
                 <MenuItem Header="_Dark Theme" IsCheckable="True" Checked="CheckDarkTheme" Unchecked="UnCheckDarkTheme"/>
-                <MenuItem Header="_Real Time Render" IsCheckable="True"/>
-                <MenuItem Header="_Font"/>
-            </MenuItem>
-            <MenuItem Header="_Help">
-                <MenuItem Header="_Syntax"/>
-                <MenuItem Header="_Info"/>
             </MenuItem>
         </Menu>
         
