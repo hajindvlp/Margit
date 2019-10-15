@@ -41,12 +41,12 @@
             Name="Menu"
             >
             <MenuItem Header="_File">
-                <MenuItem Header="_New" Click="NewContent" />
-                <MenuItem Header="_Open" Click="OpenContent"/>
-                <MenuItem Header="_Save" Click="SaveContent"/>
-                <MenuItem Header="_Save As" Click="SaveAsContent"/>
+                <MenuItem Header="_New" Click="NewContent" InputGestureText="Ctrl+N"/>
+                <MenuItem Header="_Open" Click="OpenContent" InputGestureText="Ctrl+O"/>
+                <MenuItem Header="_Save" Click="SaveContent" InputGestureText="Ctrl+S"/>
+                <MenuItem Header="_Save As" Click="SaveAsContent" InputGestureText="Ctrl+Shift+N"/>
                 <Separator />
-                <MenuItem Header="_Exit" Click="ExitClicked"/>
+                <MenuItem Header="_Exit" Click="ExitClicked" InputGestureText="Ctrl+W"/>
             </MenuItem>
             <MenuItem Header="_View">
                 <MenuItem Header="_Dark Theme" IsCheckable="True" Checked="CheckDarkTheme" Unchecked="UnCheckDarkTheme"/>

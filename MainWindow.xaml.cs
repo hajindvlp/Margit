@@ -114,15 +114,5 @@ namespace Margit
             isDark = false;
             Render();
         }
-
-        private readonly bool InfoOpened = false;
-        private void OpenInfo(object sender, RoutedEventArgs e)
-        {
-            if(!InfoOpened)
-            {
-                var InfoWindow = new info();
-                InfoWindow.Show();
-            }
-        }
     }
 }

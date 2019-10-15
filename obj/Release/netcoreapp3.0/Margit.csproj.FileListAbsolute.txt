@@ -17,5 +17,3 @@ C:\Users\harry\Desktop\CurrentProject\Margit\Margit\obj\Release\netcoreapp3.0\Ma
 C:\Users\harry\Desktop\CurrentProject\Margit\Margit\obj\Release\netcoreapp3.0\Margit.csproj.CopyComplete
 C:\Users\harry\Desktop\CurrentProject\Margit\Margit\obj\Release\netcoreapp3.0\Margit.dll
 C:\Users\harry\Desktop\CurrentProject\Margit\Margit\obj\Release\netcoreapp3.0\Margit.pdb
-C:\Users\harry\Desktop\CurrentProject\Margit\Margit\obj\Release\netcoreapp3.0\info.g.cs
-C:\Users\harry\Desktop\CurrentProject\Margit\Margit\obj\Release\netcoreapp3.0\info.baml
